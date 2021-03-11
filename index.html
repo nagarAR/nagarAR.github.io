@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>NAGARAGAWA RAILWAY 35th Anniversary AR app Download</title>
+    <script>
+
+        //var MARKET = "market://details?id=com.example";
+        const UNIVERSAL_LINK = "https://apps.apple.com/jp/app/id544007664";
+        const MARKET = "market://details?id=com.google.android.youtube";
+        const QR = "https://nya0429.github.io/applink/";
+
+        //https://kyamashiro.hateblo.jp/entry/2020/10/24/070323
+        function onLoad() {
+            if (navigator.userAgent.match(/Android/)) {
+                window.location = MARKET;
+            } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
+                window.location = UNIVERSAL_LINK;
+            } else {
+                let text = document.createElement("div");
+                text.textContent = "スマートフォンでご体験ください。"
+                document.body.appendChild(text);
+                let img = document.createElement("img");
+                img.src = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + encodeURIComponent(QR);
+                document.body.appendChild(img);
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+</body>
+</html>
