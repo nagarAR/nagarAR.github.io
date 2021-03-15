@@ -2,30 +2,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <title>NAGARAGAWA RAILWAY 35th Anniversary AR app Download</title>
+    <title>NAGARAGAWA RAILWAY 35th Anniversary AR app Download Page</title>
+    <p>このページは、長良川鉄道35周年記念ARアプリ「NagarAR」のダウンロードリンクページです。</p>
+    <p>このアプリはスマートフォンでご体験ください。</p>
+    <p><a href="https://play.google.com/store/apps/details?id=com.google.android.youtube" target="_blank" rel="noopener noreferrer">PlayStore(Android)</a></p>
+    <p><a href="https://apps.apple.com/jp/app/youtube/id544007664" target="_blank" rel="noopener noreferrer">appStore(iPhone)</a></p>
+    <div><img id="image"></div>
     <script>
 
-        //var MARKET = "market://details?id=com.example";
         const UNIVERSAL_LINK = "https://apps.apple.com/jp/app/id544007664";
         const MARKET = "market://details?id=com.google.android.youtube";
-        const QR = "https://nya0429.github.io/applink/";
+        const QR = "https://nagarar.github.io";
 
-        //https://kyamashiro.hateblo.jp/entry/2020/10/24/070323
         function onLoad() {
             if (navigator.userAgent.match(/Android/)) {
                 window.location = MARKET;
             } else if (navigator.userAgent.match(/iPhone|iPad|iPod/)) {
                 window.location = UNIVERSAL_LINK;
             } else {
-                let text = document.createElement("div");
-                text.textContent = "スマートフォンでご体験ください。"
-                document.body.appendChild(text);
-                let img = document.createElement("img");
+                let img = document.getElementById("image");
                 img.src = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + encodeURIComponent(QR);
                 document.body.appendChild(img);
             }
         }
-        //git remote set-url origin https://nagarAR@github.com/nagarAR/nagarAR.github.io.git
     </script>
 </head>
 <body onload="onLoad()">
